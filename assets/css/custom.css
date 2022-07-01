@@ -1,0 +1,38 @@
+/* Add here all your css styles (customizations) */
+.u-datepicker--v3 .flatpickr-month {
+  height: 50px;
+}
+
+.wrap_chkbox {
+  text-align: left;
+  width: 10%;
+  float: left;
+  margin-right: 15px;
+}
+
+.wrap_chkbox .chkbox {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding: 25px;
+}
+
+.wrap_chkbox .chkbox input[type="checkbox"] {
+  display: none;
+  /*체크박스 이미지만 보여지게 하기 위해 none으로 설정*/
+}
+
+.wrap_chkbox .chkbox img {
+  width: 100%;
+  webkit-filter: grayscale(100%);
+  filter: gray;
+}
+
+.wrap_chkbox p {
+  width: 100%;
+  margin-top: 5px;
+  /*display: inline-block;*/
+  vertical-align: middle;
+  text-align: center;
+}

@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+/* 폼요소 공통스타일 */
+input[type="chexbox"]::-ms-clear {
+  display: none;
+}
+input {
+  outline: none;
+  -webkit-appearance: none;
+}
+input[type="checkbox"] {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+input[type="checkbox"] + label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  color: #292929;
+  line-height: 20px;
+  display: inline-block;
+  font-size: 14px;
+}
+input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  background: url(../icon/check01.png) no-repeat 50% 50%;
+  background-size: 150%;
+  background-color: #f1f1f1;
+  border: 1px solid #f6f6f6;
+}
+input[type="checkbox"] + label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 20px;
+  opacity: 0;
+  background: url(../icon/check01.png) no-repeat 50% 50%;
+  background-size: 150%;
+  background-color: #0072ff;
+  border: 1px solid #f6f6f6;
+}
+input[type="checkbox"]:checked + label:after {
+  width: 20px;
+  opacity: 1;
+}
+input[type="password"] {
+  color: #0072ff;
+}
+/* input[type="password"] {letter-spacing: 10px;} */
+input[type="button"] {
+  background-color: #000;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-style: none;
+  border-radius: 60px;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  margin-top: 35px;
+}
+input[type="button"]:hover {
+  background-color: #0072ff !important;
+  color: #fff !important;
+}
+input[type="submit"] {
+  background-color: #000;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  margin-top: 35px;
+}
+input[type="submit"]:hover {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+input {
+  background-color: #fff;
+  width: calc(100% - 50px);
+  border-style: none;
+  cursor: pointer;
+  color: #010101;
+  outline: none;
+  font-size: 12px;
+  border-radius: 0;
+}
+button {
+  background-color: #f6f6f6;
+  width: 100%;
+  padding: 15px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+html,
+body,
+#wrapper {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+}
+
+/* 페이지 공통스타일 */
+#container {
+  width: 100%;
+  padding: 140px 0 130px;
+}
+.container-inner {
+  display: flex;
+  width: 100%;
+  background: #fff;
+}
+/* 타이틀 */
+.title {
+  position: relative;
+  padding-left: 75px;
+  font-family: "Elice Digital Baeum", sans-serif;
+  font-size: 50px;
+}
+.title:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  width: 50px;
+  height: 3px;
+  background: #000;
+}
+.title .text-de {
+  font-family: "Titillium Web", "Noto Sans KR", "돋움", Dotum, "Helvetica Neue",
+    "Apple SD Gothic Neo", sans-serif;
+  font-size: 20px;
+  color: #0072ff;
+  margin-top: 10px;
+}
+
+/* 컨텐츠 폼영역 */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+.content .content-inner {
+  width: 500px;
+}
+.form-wrap {
+  width: 100%;
+  padding: 60px 0 0 75px;
+}
+
+.int_box {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  line-height: 50px;
+  position: relative;
+  transition: all 1s;
+  height: 50px;
+  cursor: pointer;
+}
+.int_box.on {
+  border-left: 2px solid #0072ff;
+  transition: all 1s;
+  box-shadow: none;
+}
+.int_box:focus-within {
+  border-left: 2px solid #0072ff;
+  transition: all 1s;
+}
+.int_box.out {
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  border: 1px solid #f6f6f6;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.061);
+  font-size: 12px;
+  line-height: 20px;
+  position: relative;
+  transition: all 1s;
+  height: 50px;
+  cursor: pointer;
+}
+.int_box input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+.error_wrap {
+  display: none;
+}
+.popup-box {
+  display: none;
+}
+
+/* 로그인페이지 */
+
+.login-list {
+  overflow: hidden;
+}
+.login-list li {
+  float: left;
+  text-align: center;
+  width: calc(33.333333% - 2px);
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  margin-right: 3px;
+  border: 1px solid #0072ff;
+  color: #0072ff;
+  cursor: pointer;
+}
+.login-list li.on {
+  background: #0072ff;
+  color: #fff;
+}
+.login-list li:last-child {
+  margin-right: 0;
+}
+.btn-wrap {
+  overflow: hidden;
+}
+.btn-wrap .form-checkbox {
+  float: left;
+  color: #777;
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+}
+.btn-wrap .form-checkbox label {
+  color: #777;
+  font-size: 13px;
+}
+.btn-wrap .btn-id {
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  float: right;
+  color: #777;
+}
+
+.error,
+.error01 {
+  position: absolute;
+  left: 2px;
+  bottom: -22px;
+  font-size: 11px;
+  color: red;
+  opacity: 0;
+}
+.error.on {
+  opacity: 1;
+}
+.error01.on {
+  opacity: 1;
+}
+
+#Mheader {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  html,
+  body,
+  #wrapper {
+    overflow: hidden;
+  }
+
+  .title {
+    padding-left: 0;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .title .text-de {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .title:before {
+    content: "";
+    display: none;
+  }
+  .form-wrap {
+    width: 100%;
+    padding: 60px 0 0 0;
+  }
+  /* .login-list li {font-size: 14px;} */
+
+  #container {
+    padding: 100px 0 130px;
+  }
+  .content .content-inner {
+    width: 100%;
+    height: auto;
+  }
+}

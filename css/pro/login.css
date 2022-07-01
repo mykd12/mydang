@@ -1,0 +1,1855 @@
+@charset "UTF-8";
+
+.dp-n {
+  display: none;
+}
+
+.dp-b {
+  display: block;
+}
+
+.m-c {
+  color: #220ba6;
+}
+
+.m-bc {
+  color: #220ba6;
+}
+
+.s-c {
+  color: #1fadcc;
+}
+
+.s-bc {
+  color: #1fadcc;
+}
+
+.blocker {
+  z-index: 999999;
+}
+
+.text-b {
+  font-weight: bold;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+/* 폼요소 공통스타일 */
+input[type="chexbox"]::-ms-clear {
+  display: none;
+}
+
+input {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+input[type="checkbox"]+label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  color: #292929;
+  line-height: 20px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+input[type="checkbox"]+label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  background: url(../../icon/pro/check01.png) no-repeat 50% 50%;
+  background-size: 150%;
+  background-color: #f1f1f1;
+  border: 1px solid #f6f6f6;
+}
+
+input[type="checkbox"]+label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 20px;
+  opacity: 0;
+  background: url(../../icon/pro/check01.png) no-repeat 50% 50%;
+  background-size: 150%;
+  background-color: #0072ff;
+  border: 1px solid #f6f6f6;
+}
+
+input[type="checkbox"]:checked+label:after {
+  width: 20px;
+  opacity: 1;
+}
+
+input[type="radio"] {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+input[type="radio"]+label {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  color: #292929;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+input[type="radio"]+label:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  background: url(../../icon/pro/check01.png) no-repeat 50% 50%;
+  background-size: 100%;
+  background-color: #aaa;
+  border: 1px solid #f6f6f6;
+  border-radius: 100%;
+}
+
+input[type="radio"]+label:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 0;
+  height: 20px;
+  opacity: 0;
+  background: url(../../icon/pro/check01.png) no-repeat 50% 50%;
+  background-size: 100%;
+  background-color: #0072ff;
+  border: 1px solid #f6f6f6;
+  border-radius: 100%;
+}
+
+input[type="radio"]:checked+label:after {
+  width: 20px;
+  opacity: 1;
+}
+
+input[type="password"] {
+  color: #0072ff;
+}
+
+/* input[type="password"] {letter-spacing: 10px;} */
+input[type="button"] {
+  background-color: #000;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  margin-top: 35px;
+}
+
+input[type="button"]:hover {
+  background-color: #0072ff !important;
+  color: #fff !important;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  margin-top: 35px;
+}
+
+input[type="submit"]:hover {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+input {
+  background-color: #fff;
+  width: calc(100% - 50px);
+  border-style: none;
+  cursor: pointer;
+  color: #010101;
+  outline: none;
+  font-size: 12px;
+  border-radius: 0;
+}
+
+button {
+  background-color: #f6f6f6;
+  width: 100%;
+  padding: 15px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+html,
+body,
+#wrapper {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+  min-width: 320px;
+}
+
+.m-partnerFooter {
+  display: none;
+}
+
+/* 페이지 공통스타일 */
+#container {
+  width: 100%;
+  padding: 140px 0 130px;
+}
+
+.container-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* 로그인 타이틀 */
+.title {
+  position: relative;
+  font-family: "Elice Digital Baeum", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  word-break: keep-all;
+}
+
+.title:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -75px;
+  top: 25px;
+  width: 50px;
+  height: 3px;
+  background: #000;
+}
+
+.title h2 {
+  font-weight: bold;
+}
+
+.title .text-de {
+  font-family: "Titillium Web", "Noto Sans KR", "돋움", Dotum, "Helvetica Neue",
+    "Apple SD Gothic Neo", sans-serif;
+  font-size: 20px;
+  color: #0072ff;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+/* 회원가입 타이틀 */
+.join .title {
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.join .title:before {
+  left: 50%;
+  top: 75px;
+  transform: translateX(-50%);
+}
+
+.join .title .text-de {
+  margin-top: 50px;
+}
+
+/* 컨텐츠 폼영역 */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.content .content-inner {
+  width: 400px;
+}
+
+.form-wrap {
+  width: 100%;
+  padding: 60px 0 0;
+}
+
+.int_box {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  line-height: 50px;
+  position: relative;
+  transition: all 1s;
+  height: 50px;
+  cursor: pointer;
+}
+
+.int_box.on {
+  border-left: 2px solid #0072ff;
+  transition: all 1s;
+  box-shadow: none;
+}
+
+.int_box:focus-within {
+  border-left: 2px solid #0072ff;
+  transition: all 1s;
+}
+
+.int_box.out {
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  border: 1px solid #f6f6f6;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.061);
+  font-size: 12px;
+  line-height: 20px;
+  position: relative;
+  transition: all 1s;
+  height: 50px;
+  cursor: pointer;
+}
+
+.int_box input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.error_wrap {
+  display: none;
+}
+
+.popup-box {
+  display: none;
+}
+
+/* 로그인페이지 */
+.login-list {
+  overflow: hidden;
+}
+
+.login-list li {
+  float: left;
+  text-align: center;
+  width: calc(33.333333% - 2px);
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  margin-right: 3px;
+  border: 1px solid #0072ff;
+  color: #0072ff;
+  cursor: pointer;
+}
+
+.login-list li.on {
+  background: #0072ff;
+  color: #fff;
+}
+
+.login-list li:last-child {
+  margin-right: 0;
+}
+
+.btn-wrap {
+  overflow: hidden;
+}
+
+.btn-wrap .form-checkbox {
+  float: left;
+  color: #777;
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.btn-wrap .form-checkbox label {
+  color: #777;
+  font-size: 13px;
+}
+
+.btnFind-wrap {
+  float: right;
+}
+
+.btn-wrap a {
+  display: inline-block;
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  color: #777;
+}
+
+.btn-wrap a:hover {
+  color: #000;
+}
+
+.error,
+.error01 {
+  display: none;
+  position: absolute;
+  left: 2px;
+  bottom: -22px;
+  font-size: 11px;
+  color: red;
+  opacity: 0;
+}
+
+.error.on {
+  opacity: 1;
+}
+
+.error01.on {
+  opacity: 1;
+}
+
+/* 아이디확인 */
+.btn-wrap {
+  overflow: hidden;
+}
+
+.btn-wrap input {
+  float: left;
+  width: calc(50% - 2px);
+  margin-right: 4px;
+}
+
+.btn-wrap input:last-child {
+  margin-right: 0;
+}
+
+.id-list li {
+  display: flex;
+  flex-direction: initial;
+  border: 1px solid #aaa;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.id-list li .text-left {
+  width: 30%;
+  background: #aaa;
+  color: #fff;
+}
+
+.id-list li.on {
+  border: 1px solid #0072ff;
+}
+
+.id-list li.on .text-left {
+  background: #0072ff;
+  color: #fff;
+}
+
+.id-list li .input-box {
+  width: 70%;
+  background: #fff;
+  text-align: left;
+  padding: 0 20px;
+}
+
+/* 비밀번호 찾기 */
+.pwFind .email_box input {
+  left: 30%;
+  width: 70%;
+}
+
+.idSelect {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 30%;
+  background: #0072ff;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+}
+
+.btn-idSelect {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.btn-idSelect i {
+  color: #fff;
+  margin-left: 20%;
+}
+
+.id_select {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  height: auto;
+  font-size: 13px;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #eee;
+  z-index: 10;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 10%);
+}
+
+.id_select li {
+  height: 50px;
+  line-height: 50px;
+}
+
+.id_select li:hover {
+  background-color: #e7e7e7;
+}
+
+.id_select.on {
+  display: block;
+}
+
+/* 회원가입 */
+.join .content .content-inner {
+  width: 100%;
+}
+
+.join01 .joinBtn-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.join01 .joinBtn-wrap .btn-box {
+  display: block;
+  width: 300px;
+  border: 1px solid #ddd;
+  position: relative;
+  margin-right: 25px;
+}
+.join01 .joinBtn-wrap .btn-box:last-child {
+  margin-right: 0;
+}
+
+.join01 .joinBtn-wrap .btn-box .row01 {
+  padding: 50px 35px 90%;
+  position: relative;
+  height: 0;
+  font-size: 40px;
+}
+
+.join01 .joinBtn-wrap .btn-box .row01 p span {
+  display: block;
+}
+
+.join01 .joinBtn-wrap .btn-box .row01 .circle01 {
+  position: absolute;
+  left: 40px;
+  top: 35px;
+  width: 30px;
+}
+
+.join01 .joinBtn-wrap .btn-box .row01 img {
+  position: absolute;
+  right: 35px;
+  bottom: 65px;
+  width: 100px;
+}
+
+.join01 .joinBtn-wrap .btn-box .row02 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #000;
+  color: #fff;
+  padding: 0 50px;
+  font-size: 16px;
+}
+
+.join01 .joinBtn-wrap .btn-box .row02 img {
+  position: absolute;
+  right: 50px;
+  top: 15px;
+  width: 50px;
+}
+
+/* 약관동의 페이지 */
+#container.agree {
+  background: #fcfcfc;
+  padding: 140px 0 100px;
+}
+
+.agree input[type="checkbox"]+label {
+  padding-left: 25px;
+}
+
+.agree input[type="checkbox"]+label:before {
+  background: #fcfcfc url(../../icon/pro/check05.png) no-repeat 50% 50%;
+  ;
+  border-radius: 5px;
+  background-size: 85%;
+  border: 1px solid #777;
+  width: 16px;
+  height: 16px;
+}
+
+.agree input[type="checkbox"]+label:after {
+  background: #777 url(../../icon/pro/check05.png) no-repeat 50% 50%;
+  ;
+  border-radius: 5px;
+  background-size: 85%;
+  border: 1px solid #777;
+  width: 16px;
+  height: 16px;
+}
+
+.agree .container-inner {
+  background: #fcfcfc;
+}
+
+.agree .container-inner .content .content-inner,
+.agree_box {
+  margin-bottom: 35px;
+}
+
+.agree_box h3 {
+  position: relative;
+  font-size: 16px;
+  margin: 5px 0;
+  display: none;
+}
+
+.step-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 70px;
+  max-width: 630px;
+  margin: 130px auto 80px;
+}
+
+.step-wrap li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  color: #999;
+  font-size: 20px;
+  text-align: center;
+}
+
+.step-wrap li .num {
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  border-radius: 40px;
+  font-size: 20px;
+  background: #fff;
+  color: #0072ff;
+  border: 2px solid #0072ff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.step-wrap li.on {
+  color: #000;
+}
+
+.step-wrap li.on .num {
+  background: #0072ff;
+  color: #fff;
+}
+
+.step-wrap li img {
+  width: 67px;
+}
+
+.agree_box .form_checkbox {
+  text-align: right;
+}
+
+.agree_box .form_checkbox label {
+  font-size: 16px;
+  color: #555;
+  line-height: 18px;
+}
+
+.agree .form_wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.agree_box .text_box {
+  height: 260px;
+  overflow-y: scroll;
+  padding: 30px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #555;
+  background: #fff;
+  line-height: 1.5;
+}
+
+.agree_box .text_box h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.agree_box .text_box h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.agree_box .text_box ul {
+  padding-left: 15px;
+}
+
+.agree_box .text_box::-webkit-scrollbar {
+  width: 7px;
+}
+
+.agree_box .text_box::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.agree_box .text_box::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+.agree_box .text_box::-webkit-scrollbar-thumb:hover {
+  background: #220ba6;
+}
+
+.agree_box .text_box::-webkit-scrollbar-thumb:active {
+  background: #220ba6;
+}
+
+.agree .all_agree {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+  background: #f1f1f1;
+  height: 50px;
+  line-height: 50px;
+}
+
+input[type="checkbox"]#agreeAll {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+
+input[type="checkbox"]#agreeAll+label {
+  padding-left: 25px;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+#agree_form .sub-title {
+  margin-bottom: 35px;
+}
+
+#agree_form h4 {
+  font-size: 20px;
+  color: #0072ff;
+  margin-bottom: 10px;
+}
+
+#agree_form .sub-title img {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+#agree_form .sub-title p {
+  font-size: 14px;
+  color: #777;
+  padding-left: 20px;
+}
+
+.prsnlCrtfc-wrap .text-de {
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.btn-prsnlCrtfc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  text-align: center;
+  max-width: 290px;
+  margin: 0 auto;
+  padding: 45px 50px;
+  color: #555;
+  background: #fff;
+  line-height: 1.2;
+  word-break: keep-all;
+}
+
+.btn-prsnlCrtfc .img-wrap {
+  width: 74px;
+  padding-bottom: 85px;
+  margin-bottom: 20px;
+}
+
+.prsnlCrtfc-wrap .text-ti {
+  background: #000;
+  color: #fff;
+  margin-top: 40px;
+  padding: 0 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+
+}
+
+
+
+/* input[type="checkbox"]#agreeAll + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-size: 150%;
+  background-color: #f1f1f1;
+  border: 1px solid #f6f6f6;
+  background: url(../../icon/pro/check05.png) no-repeat 50% 50%;
+    border-radius: 5px;
+    background-size: 85%;
+    border: 1px solid #777;
+
+}
+input[type="checkbox"]#agreeAll + label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 0;
+  height: 30px;
+  opacity: 0;
+  background: url(../../icon/pro/check01.png) no-repeat 50% 50%;
+  background-size: 150%;
+  background-color: #0072ff;
+  border: 1px solid #f6f6f6;
+}
+input[type="checkbox"]#agreeAll:checked + label:after {
+  width: 30px;
+  opacity: 1;
+} */
+.agree input[type="submit"],
+.join02 input[type="submit"] {
+  background-color: #000;
+  max-width: 230px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 60px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  margin-top: 35px;
+  border-radius: 50px;
+}
+
+.bottomBtn-wrap {
+  text-align: center;
+}
+
+.join02 .container-inner {
+  padding: 0 15%;
+}
+
+.join02 .title {
+  position: relative;
+}
+
+.join02 .title::before {
+  display: none;
+}
+
+.join02 .title .icon-wrap {
+  position: absolute;
+  left: 50%;
+  top: -150px;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #0072ff;
+  border-radius: 150px;
+  margin-bottom: 50px;
+}
+
+.join02 .title .icon-wrap img {
+  position: absolute;
+  left: 50%;
+  top: 85px;
+  transform: translateX(-50%);
+  width: 50px;
+}
+
+.join02 .title h4 {
+  padding-top: 30px;
+}
+
+.join02 .int_box {
+  margin-top: 30px;
+  border: none;
+  font-size: 18px;
+  position: relative;
+  transition: all 1s;
+  cursor: pointer;
+  height: 50px;
+}
+
+.join02 .int_box.on {
+  border-left: none;
+  transition: all 0;
+  box-shadow: none;
+}
+
+.join02 .int_box h4 {
+  position: relative;
+  font-size: 16px;
+  width: 150px;
+  padding-left: 10px;
+}
+
+.join02 .int_box h4:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #0072ff;
+}
+
+.join02 .int_box h4.none:before {
+  display: none;
+}
+
+.join02 .int_box:focus-within {
+  border-left: none;
+  transition: none;
+}
+
+.join02 .int_box.out input {
+  border-bottom: 1px solid #ddd;
+}
+
+.join02 .int_box input {
+  position: absolute;
+  left: 150px;
+  top: 0;
+  width: calc(100% - 150px);
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.join02 .int_box:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 150px;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ddd;
+}
+
+.join02 .int_box.on:after {
+  width: calc(100% - 150px);
+  height: 2px;
+  background: #0072ff;
+  transition: all 1s;
+}
+
+.join02 .int_box a {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  background: #ccc;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.join02 .int_box a:hover {
+  background: #0072ff;
+}
+
+.join02 .int_box.on a {
+  background: #0072ff;
+}
+
+.join02 .int_box.on input {
+  background: #fcfcfc;
+}
+
+.join02 .int_box label {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  background: #ccc;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  z-index: 1;
+}
+
+.join02 .int_box label.on {
+  background: #0072ff;
+}
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+.tel_box02 .text-de {
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #0072ff;
+}
+
+.join02 #join_form {
+  position: relative;
+}
+
+.join02 .ck-wrap {
+  display: flex;
+  justify-content: end;
+  margin: 20px 0 80px;
+}
+
+.join02 .ck-wrap .form-checkbox {
+  margin-left: 20px;
+}
+
+.join02 .ck-wrap .form-checkbox:first-child {
+  margin-left: 0;
+}
+
+/* 중개사 회원가입 모달 공통*/
+.joionModal {
+  display: none;
+  padding: 0;
+  max-width: 800px;
+  min-width: 320px;
+}
+
+.joionModal.modal {
+  display: none;
+  padding: 0;
+  max-width: 800px;
+  min-width: 320px;
+  border-radius: 10px;
+}
+
+.joionModal.modal a.close-modal {
+  top: 20px;
+  right: 30px;
+  background-image: url(../../icon/pro/close01.png);
+  width: 17px;
+}
+
+.joionModal .title-wrap {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+}
+
+/* 중개사 회원가입 모달01 검색하기 */
+/* .modal-find .result {display: none;} */
+/* .modal-find .no-result {display: none;} */
+.modal-find .no-result p {
+  padding: 50px 0 100px;
+  font-weight: 500;
+}
+
+.modal-find .no-result .btn-cstCntInq {
+  margin: 0 0 20px;
+}
+
+.modal-find .search-form-wrap {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 100px;
+  position: relative;
+  font-family: "Elice Digital Baeum", sans-serif;
+  margin-bottom: 50px;
+}
+
+.modal-find .search-form-wrap .searchint {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border: none;
+  border-bottom: 2px solid #0072ff;
+  font-size: 14px;
+  padding: 0px 50px 0 10px;
+  outline: none;
+}
+
+.modal-find .search-form-wrap .btn-search {
+  position: absolute;
+  right: 100px;
+  top: -2px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.modal-find .search-form-wrap .btn-search i {
+  font-size: 25px;
+  display: inline-block;
+  color: #0072ff;
+}
+
+.modal-find .search-form-wrap .search-form {
+  width: 500px;
+}
+
+.modal-find .paginationDiv {
+  margin-top: 40px;
+}
+
+.modal-find .mdlCnt-wrap {
+  padding: 40px 50px 60px;
+}
+
+/* 모달01 테이블 */
+.table-lsName {
+  border-collapse: collapse;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px 0;
+}
+
+.table-lsName th {
+  color: #555;
+  background: #f7f7f7;
+  font-weight: lighter;
+}
+
+.table-lsName th,
+.table-lsName td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table-lsName td {
+  cursor: pointer;
+}
+
+.table-lsName th:first-child,
+.table-lsName td:first-child {
+  border-left: 0;
+}
+
+.table-lsName th:last-child,
+.table-lsName td:last-child {
+  border-right: 0;
+}
+
+.no-result {
+  text-align: center;
+}
+
+.no-result p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 중개사 회원가입 모달02 문의하기 */
+.btn-cstCntInq {
+  display: inline-block;
+  background-color: #000;
+  max-width: 230px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 60px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  margin-top: 35px;
+}
+
+.cstCntInq-wrap {
+  overflow: hidden;
+  padding: 40px 60px 60px;
+}
+
+.cstCntInq-wrap .left-wrap {
+  float: left;
+  width: 250px;
+}
+
+.cstCntInq-wrap .left-wrap .int_box {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.cstCntInq-wrap .left-wrap .int_box input {
+  left: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.cstCntInq-wrap .left-wrap .int_box:after {
+  left: 0;
+  width: 100%;
+}
+
+.cstCntInq-wrap .left-wrap .int_box.on:after {
+  left: 0;
+}
+
+.cstCntInq-wrap.inquiryWrite .left-wrap .select_box .inq_select {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  color: #aaa;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  background: #fff url(../../icon/pro/arrow04.png) right 20px top 20px no-repeat;
+}
+
+.cstCntInq-wrap.inquiryWrite .left-wrap .select_box .inq_select.on {
+  border-bottom: 2px solid #0072ff;
+}
+
+.cstCntInq-wrap .right-wrap {
+  float: right;
+  position: relative;
+  width: calc(100% - 310px);
+}
+
+.cstCntInq-wrap .right-wrap input[type="submit"] {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  padding: 0 30px;
+  background: #0072ff;
+  border-radius: 0;
+}
+
+.cstCntInq-wrap .right-wrap textarea {
+  background: #fff;
+  border: 1px solid #ddd;
+  height: 350px;
+  padding: 20px 20px 60px;
+  outline: none;
+}
+
+.cpJoin.join02 .cpField_box {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: -25px;
+}
+
+.cpJoin.join02 .cpField_box h4 {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+}
+
+.cpJoin.join02 .cpField_box h4:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #0072ff;
+}
+
+.cpJoin.join02 .cpField_box .fieldCk-wrap {
+  float: right;
+  width: calc(100% - 150px);
+}
+
+.cpJoin.join02 .cpField_box .fieldCk-wrap .chk_box {
+  position: relative;
+  float: left;
+  width: calc(25% - 12px);
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.cpJoin.join02 .cpField_box .fieldCk-wrap .chk_box:nth-child(4n) {
+  margin-right: 0;
+}
+
+.cpJoin.join02 .cpField_box input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+
+.cpJoin.join02 .cpField_box input[type="checkbox"]+label {
+  display: block;
+  width: 100%;
+  background: #fff;
+  color: #0072ff;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #0072ff;
+}
+
+.cpJoin.join02 .cpField_box input[type="checkbox"]+label:before {
+  display: none;
+}
+
+.cpJoin.join02 .cpField_box input[type="checkbox"]+label:after {
+  display: none;
+}
+
+.cpJoin.join02 .cpField_box input[type="checkbox"]:checked+label {
+  background: #0072ff;
+  color: #fff;
+}
+
+.cpField_box .text-de {
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #0072ff;
+}
+
+.cpJoin.join02 .cpInt-box {
+  height: 80px;
+}
+
+.cpJoin.join02 .cpInt-box h4 {
+  display: inline-block;
+}
+
+.cpJoin.join02 .cpInt-box textarea {
+  float: right;
+  width: calc(100% - 150px);
+  height: 80px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background: #fcfcfc;
+}
+
+.join02.joinCmp .text-wrap {
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 50px;
+  word-break: keep-all;
+}
+
+.join02.joinCmp .text-wrap img {
+  width: 45px;
+  margin-top: 50px;
+}
+
+.join02.joinCmp .btn-wrap {
+  text-align: center;
+}
+
+.join02.joinCmp .btn-login {
+  display: inline-block;
+  background-color: #000;
+  max-width: 230px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 60px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+}
+
+.pwFind .btn-prsnlCrtfc {
+  margin-top: 30px;
+}
+
+.pwFind .form-wrap .text-de {
+  font-size: 12px;
+  color: #555;
+}
+
+.pwFind .btn-prsnlCrtfc,
+.idFind .btn-prsnlCrtfc {
+  width: 100%;
+  max-width: none;
+}
+
+
+/* 검수중 */
+
+.exmnt .con-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.exmnt .img-wrap {
+  width: 90px;
+  height: 107px;
+  margin-bottom: 65px;
+  overflow: visible;
+}
+
+.exmnt .img-wrap:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 1px;
+  background: #000;
+}
+
+.exmnt .text-wrap {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.exmnt .text-wrap .text-ti {
+  font-size: 49px;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: lighter;
+}
+
+.exmnt .btn-wrap {
+  text-align: center;
+}
+
+.exmnt .btn-home {
+  display: inline-block;
+  background-color: #000;
+  max-width: 230px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 50px;
+  border-style: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+.exmnt .btn-home:hover {
+  color: #fff;
+  background-color: #222;
+}
+
+
+#Mheader {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .content-inner {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  /* .agree .content-inner {padding: 0 10%;} */
+  .step-wrap li {
+    padding: 0 3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    padding-left: 0;
+    font-size: 40px;
+    text-align: center;
+    word-break: keep-all;
+  }
+
+  .title h2 {
+    padding-left: 0;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    word-wrap: break-word;
+  }
+
+  .title .text-de {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .title:before {
+    content: "";
+    display: none;
+  }
+
+  .form-wrap {
+    width: 100%;
+    padding: 60px 0 0 0;
+  }
+
+  /* .login-list li {font-size: 14px;} */
+
+  #container {
+    padding: 120px 30px 130px;
+  }
+
+  .content .content-inner {
+    width: 100%;
+    height: auto;
+  }
+
+  .id-list li {
+    font-size: 13px;
+  }
+
+  .id-list li .text-left {
+    width: 20%;
+  }
+
+  .id-list li .input-box {
+    width: 80%;
+    padding: 0 10px;
+  }
+
+  .join.join01 .content-inner {
+    padding: 0;
+  }
+
+  .join01 .joinBtn-wrap {
+    flex-direction: column;
+  }
+
+  .join01 .joinBtn-wrap .btn-box {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .join01 .joinBtn-wrap .btn-box .row01 {
+    padding: 50px 20px;
+    height: auto;
+    font-size: 20px;
+  }
+
+  .join01 .joinBtn-wrap .btn-box .row01 p span {
+    display: inline-block;
+  }
+
+  .join01 .joinBtn-wrap .btn-box .row01 .circle01 {
+    left: 20px;
+    width: 20px;
+  }
+
+  .join01 .joinBtn-wrap .btn-box .row01 img {
+    bottom: auto;
+    top: 25px;
+    width: 55px;
+  }
+
+  .join01 .joinBtn-wrap .btn-box .row02 {
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .join01 .joinBtn-wrap .btn-box .row02 img {
+    right: 20px;
+    top: 10px;
+    width: 30px;
+  }
+
+  .join .title:before {
+    content: "";
+    display: block;
+    top: 65px;
+    width: 25px;
+  }
+
+  .join .container-inner {
+    padding: 0;
+  }
+
+  .join .content-inner {
+    padding: 0 20px;
+  }
+
+  .step-wrap {
+    margin: 80px 0 40px;
+    padding: 0;
+  }
+
+  .step-wrap li {
+    padding: 0;
+    color: #999;
+    font-size: 14px;
+  }
+
+  .step-wrap li .num {
+    width: 35px;
+    height: 35px;
+    line-height: 34px;
+    font-size: 18px;
+    border: 1px solid #0072ff;
+  }
+
+  .step-wrap li img {
+    width: 30px;
+  }
+
+  .join02 .int_box {
+    height: auto;
+  }
+
+  .join02 .int_box h4 {
+    display: block;
+    width: 100%;
+  }
+
+  .join02 .int_box input {
+    display: block;
+    width: 100%;
+    position: static;
+  }
+
+  .join02 .int_box.on:after {
+    width: 100%;
+    left: 0;
+  }
+
+  .join02.join .title:before {
+    display: none;
+  }
+
+  .cpJoin.join02 .cpField_box h4 {
+    width: 100%;
+  }
+
+  .cpField_box .text-de {
+    left: 100px;
+    top: 20px;
+  }
+
+  .cpJoin.join02 .cpField_box .fieldCk-wrap {
+    width: 100%;
+  }
+
+  .cpJoin.join02 .cpField_box .fieldCk-wrap .chk_box {
+    width: calc(33.333333% - 12px);
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .cpJoin.join02 .cpField_box .fieldCk-wrap .chk_box:nth-child(4n) {
+    margin-right: 15px;
+  }
+
+  .cpJoin.join02 .cpField_box .fieldCk-wrap .chk_box:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .join02 .ck-wrap .form-checkbox {
+    margin-left: 10px;
+  }
+
+  .join02 .ck-wrap .form-checkbox label {
+    font-size: 12px;
+  }
+
+  .cpJoin.join02 .cpInt-box {
+    height: 120px;
+  }
+
+  .cpJoin.join02 .cpInt-box textarea {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .join02.joinCmp .text-wrap {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 50px;
+  }
+
+  .jquery-modal.blocker {
+    padding: 0;
+    z-index: 9999999;
+    min-width: 320px;
+  }
+
+  .joionModal.modal {
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .modal-find .search-form-wrap {
+    padding: 0;
+  }
+
+  .modal-find .search-form-wrap .btn-search {
+    right: 0;
+  }
+
+  .modal-find .mdlCnt-wrap {
+    padding: 20px 30px 40px;
+  }
+
+  .table-lsName th,
+  .table-lsName td {
+    padding: 20px 10px;
+  }
+
+  .table-lsName {
+    font-size: 14px;
+  }
+
+  .modal-find .search-form-wrap .search-form {
+    width: 100%;
+  }
+
+  .cstCntInq-wrap .left-wrap {
+    width: 100%;
+  }
+
+  .inquiryWrite .select_box {
+    width: 100%;
+  }
+
+  .cstCntInq-wrap.inquiryWrite .left-wrap .select_box .inq_select {
+    width: 100%;
+  }
+
+  .cstCntInq-wrap .right-wrap {
+    width: 100%;
+  }
+
+
+  .exmnt .img-wrap {}
+
+  .exmnt .text-wrap {
+    font-size: 15px;
+  }
+
+  .exmnt .text-wrap .text-ti {
+    font-size: 35px;
+  }
+}

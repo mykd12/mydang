@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* html의 모든 요소와 가상요소선택자에 border-box사용하여 padding, border사용시
+늘어나지않게함 */
+*, :before, :after {box-sizing: border-box;}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, code, em, img, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section, main, audio, video { margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,.1);
+}
+
+/*html5추가 시멘틱엘리먼트를 익스하위버전에서 블럭으로 인식되도록함*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main { display: block }
+
+/* button태그에 손모양 커서 */
+button { cursor: pointer }
+
+/* 익스하위버전에서 이미지 선없애기 */
+fieldset, img { border: 0; vertical-align: top }
+
+/* 반응형에서 이미지 원본크기보다 커지지 않고 줄어들수는 있게함 */
+img{max-width: 100%; width: 100%; height: auto;}
+
+/* 리스트 기호 빼기 */
+ol, ul { list-style: none }
+
+/* 태그 기본 기울임꼴 제거 */
+address, em { font-style: normal }
+
+/* 페이지안에서 가장 많은 링크색 지정 */
+a { text-decoration: none; color: #222; }
+
+/* iframe으로 외부컨텐츠를 연결했을때
+외부컨텐츠안쪽내용이 우리페이지에 영향을 주지못하도록 가려줌
+iframe아래쪽 간격없애기
+*/
+iframe { overflow: hidden; border: 0; vertical-align: top; }
+
+/* 칸의 선을 합치기, 칸의 간격없애기, 가로를 늘려줌 */
+table { border-collapse: collapse; border-spacing: 0; width: 100%; table-layout: fixed; }
+
+/* 굵기 빼고 헤딩태그 폰트크기를 body에 선언한 크기와 일치시킴 */
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100% }
+
+/* 폼요소의 높이가 다를때 요소끼리 세로정렬시킴 */
+input, select, textarea, button { vertical-align: middle; margin: 0; padding: 0 }
+
+/* textarea 리사이즈기능 빼기 */
+textarea { resize: none }
+
+/* 페이지안의 모든 폰트의 줄간격을 1.5로 통일시킴
+모바일 크롬, 모바일 사파리 브라우져의 텍스트 자동확대 방지
+*/
+body { line-height: 1.5; -webkit-text-size-adjust: none }
+
+/* legend,caption,메뉴제목,섹션제목 블라인드 */
+legend, caption, .blind { position: absolute; overflow: hidden; clip: rect(0 0 0 0); margin: -1px; width: 1px; height: 1px }
+
+/* 공통스타일 */
+input[type=text]::-ms-clear{ display: none; }
+/* 선택영역 컬러 변경*/
+::-moz-selection {background: #C4A8FB; color:#fff;}
+::selection {background: #C4A8FB; color:#fff;}
+
+.clearfix:after {content: ''; display: block; clear: both;}
+
+/* skip Navgation */
+#skipNavi a { position: absolute; left: 0; top: 0; width: 100%; line-height: 40px; background: rgba(28, 28, 28, 0.8); color: #fff; z-index: 99999; text-align: center; transform: translateY(-100%); }
+
+#skipNavi a:focus { transform: translateY(0); }
+
+body, input, select, textarea, button, table { font-family: 'Noto Sans KR','돋움',Dotum,'Helvetica Neue','Apple SD Gothic Neo',sans-serif; font-size: 17px; color: #010101;}
+
+/* placeholder공통 */
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #bbb; }
+::-ms-input-placeholder { /* Microsoft Edge */ color: #bbb; }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */ color: #bbb; opacity: 1; /* Firefox */ }
+
+
+/* 셀렉트 공통 */
+.select_wrap { display: inline-block; position: relative;}
+/* .select_wrap:after { content: ''; position: absolute; right:13px; top:20px; width:12px; height:7px; background: url(../images/icon_select_arr.png) no-repeat; } */
+
+select::-ms-expand { display: none; }
+select { -moz-appearance: none; -webkit-appearance: none; }
+
+textarea { background: #f8f8f8; border:none; width:100%; padding: 5px 10px;}
+
+/* 파일선택폼 */
+.file_wrap { width:364px; display: inline-block; border:2px solid #dddddd; padding-right: 98px; position: relative; }
+.file_wrap input[type="text"] { background: none !important; height:41px !important; text-indent: 13px; }
+.file_wrap label { position: absolute; right: 0; top:0; width: 98px; height:41px; cursor: pointer; text-align: center; line-height: 41px; color:#C4A8FB; font-weight: 500; }
+.file_wrap label:before { content: ''; position: absolute; left:0; top:13px; width:2px; height:16px; background: #e8e8e8; }
+
+
+/* 페이지 */
+#paging {text-align: center; margin-top: 70px;}
+#paging a {display: inline-block; border: 1px solid #ddd; width: 40px; height: 40px; line-height: 38px; text-align: center; vertical-align: top;}
+#paging a.prev:hover, 
+#paging a.next:hover {border-color: #222;}
+#paging ul {display: inline-block; margin: 0 10px; overflow: hidden;}
+#paging ul li {float: left; margin-left: -1px;}
+#paging ul li:first-child {margin-left: 0;}
+#paging ul li a.this {background: #222; color: #fff; border: 1px solid #222;}
+#paging ul li:hover a {background: #222; color: #fff; border: 1px solid #222;}
